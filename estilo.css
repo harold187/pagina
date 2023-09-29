@@ -1,0 +1,319 @@
+/* CSS base */
+html {
+  font-family: "Public Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #efefef;
+  overflow-x: hidden;
+}
+
+/* Encabezado */
+header {
+  background: url("img/juegos.jpg");
+  min-height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.se1 {
+  min-width: 0px;
+  margin: auto;
+  padding: 30px 0;
+}
+
+.se1 h1 {
+  font-size: 24px;
+  color: white;
+  margin-left: 20px;
+}
+
+.encabezado-img {
+  text-align: center;
+}
+
+.encabezado-img p {
+  font-size: 60px;
+  font-weight: bold;
+  margin: 1em 0;
+  color: white;
+}
+
+.encabezado-img a {
+  color: white;
+  text-decoration: none;
+  background: rgb(17, 191, 84);
+  padding: 4px 20px;
+  border-radius: 30px;
+  font-size: 30px;
+  margin: 15px;
+}
+
+/* Contenido principal */
+.main {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Artículos */
+section article {
+  transition: box-shadow 0.2s ease;
+  background-color: aliceblue;
+  margin: 10px;
+  border-radius: 8px;
+  padding: 5px 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+section article:hover {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.466);
+}
+
+section article h2,
+section article p {
+  margin: 8px;
+}
+
+/* Pie de página */
+footer {
+  background-color: rgb(17, 191, 84);
+  text-align: center;
+  padding: 20px;
+  color: aliceblue;
+}
+
+/* Publicaciones (posts) */
+.post {
+  width: 100%;
+  max-width: 100%;
+  margin: 10px;
+  background-color: aliceblue;
+  border-radius: 8px;
+  padding: 11px 42px;
+  cursor: pointer;
+  box-sizing: border-box;
+  aspect-ratio: 3;
+}
+
+.post img {
+  max-width: 75%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+/* Barra lateral */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 25px;
+  height: 100%;
+  background-color: rgb(17, 191, 84);
+  color: white;
+}
+
+/* Menú lateral */
+.menu {
+  position: fixed;
+  left: -200px;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  background-color: rgb(17, 191, 84);
+  color: white;
+  transition: left 0.5s ease;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu ul li {
+  padding: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.menu ul li:hover {
+  background-color: rgb(10, 140, 61);
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.2s ease;
+}
+
+.menu a:hover {
+  color: #333;
+}
+
+
+/* Telefonos pequeños */
+@media (max-width: 375px) {
+  .se1 {
+    max-width: 100%; 
+  }
+  
+  .se1 h1 {
+    font-size: 20px;
+  }
+
+  .encabezado-img p {
+    font-size: 32px;
+  }
+
+  .encabezado-img a {
+    font-size: 18px;
+    margin: 10px;
+  }
+
+  .main {
+    justify-content: center;
+  }
+
+  .post {
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  .menu {
+    width: 100px;
+  }
+}
+
+/* Telefonos grandes */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .se1 h1 {
+    font-size: 24px;
+  }
+
+  .encabezado-img p {
+    font-size: 40px;
+  }
+
+  .encabezado-img a {
+    font-size: 20px;
+    margin: 10px;
+  }
+
+  .post {
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  .menu {
+    width: 150px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  header {
+    min-height: 300px;
+  }
+
+  .se1 {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 30px 10px;
+  }
+
+  .encabezado-img p {
+    font-size: 36px;
+  }
+
+  .encabezado-img a {
+    font-size: 18px;
+    margin: 10px;
+  }
+
+  .post {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .sidebar {
+    width: 50px;
+  }
+}
+
+/* Escritorio */
+@media (min-width: 1025px) and (max-width: 1199.98px) {
+  .se1 h1 {
+    font-size: 32px;
+  }
+
+  .encabezado-img p {
+    font-size: 60px;
+  }
+
+  .encabezado-img a {
+    font-size: 30px;
+    margin: 15px;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .post {
+    width: calc(50% - 10px);
+    margin: 10px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
+/* Más grande que escritorio */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .se1 h1 {
+    font-size: 36px;
+  }
+
+  .encabezado-img p {
+    font-size: 80px;
+  }
+
+  .encabezado-img a {
+    font-size: 36px;
+    margin: 20px;
+  }
+
+  .container {
+    width: 95%;
+  }
+
+  .post {
+    width: 45%;
+    margin: 10px;
+  }
+
+  .sidebar {
+    width: 60px;
+  }
+}
