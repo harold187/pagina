@@ -78,3 +78,17 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.getElementById("formulario").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  const loginData = {
+      username: username,
+      password: password
+  };
+
+  console.log(JSON.stringify(loginData));
+
+});
